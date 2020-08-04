@@ -46,11 +46,39 @@ allItems.forEach(function(item) {
 const allImgs = document.querySelectorAll('img')
 
 allImgs.forEach(el => {
-    debugger
     el.addEventListener('mouseleave', function(item) {
         el.style.filter = 'grayscale(100%)';
     })
 })
 
 // #6
-// 
+// make image larger if wheel'd on
+const lastImg = document.querySelector('.rounded')
+
+lastImg.addEventListener('wheel', function(item) {
+    lastImg.classList.add('round');
+})
+
+// #7
+// Footer text gets bigger once right clicked
+const footer = document.querySelector('footer p')
+
+footer.addEventListener('contextmenu', function(item) {
+    footer.classList.toggle('round')
+})
+
+// #8 
+// rainbow text when mouse is over text
+const penImg = document.querySelector('.content-destination p')
+
+penImg.addEventListener('mousemove', function(item) {
+    penImg.classList.add('rainbow')
+})
+
+// #9 
+// delete banner text when selected
+const navHome = document.querySelector('a')
+
+navHome.addEventListener('select', event => {
+    navHome.style.display = 'none'
+})
