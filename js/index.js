@@ -26,3 +26,31 @@ logoHeading.addEventListener('click', function(item) {
     logoHeading.classList.add('the-title')
     logoHeading.style.color = 'red'
 })
+
+// #4
+// Dark Mode: Turn background black & text white
+
+const allItems = Array.from(document.getElementsByTagName('*'))
+
+allItems.forEach(function(item) {
+    item.addEventListener('copy', function(el) {
+        item.style.backgroundColor = 'black'
+        item.style.color = 'white'
+        console.log(allItems);
+    })
+})
+
+// #5
+// black and white the images when cursor leaves image
+
+const allImgs = document.querySelectorAll('img')
+
+allImgs.forEach(el => {
+    debugger
+    el.addEventListener('mouseleave', function(item) {
+        el.style.filter = 'grayscale(100%)';
+    })
+})
+
+// #6
+// 
