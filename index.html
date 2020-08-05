@@ -19,6 +19,40 @@
 
 <body>
 
+  <style>
+    .round {
+      transform: scale(2);
+    }
+
+    .rainbow {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 32px;
+  font-family: monospace;
+  letter-spacing: 5px;
+  animation: colorRotate 6s linear 0s infinite;
+}
+
+    @keyframes colorRotate {
+        from {
+          color: #6666ff;
+        }
+        10% {
+          color: #0099ff;
+        }
+        50% {
+          color: #00ff00;
+        }
+        75% {
+          color: #ff3399;
+        }
+        100% {
+          color: #6666ff;
+        }
+    }
+</style>
+
+
   <header class="main-navigation">
     <div class="container nav-container">
       <h1 class="logo-heading">Fun Bus</h1>
@@ -82,6 +116,7 @@
       </div>
     </section>
   </div><!-- container -->
+
 
   <footer class="footer">
     <p>Copyright Fun Bus 2020</p>
