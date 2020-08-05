@@ -9,7 +9,7 @@ bus.addEventListener('mouseover', function(event) {
 })
 
 // #2 
-// make h2 bigger on click
+// make h2 green on doubleclick
 const allTitles = document.querySelectorAll('h2')
 
 allTitles.forEach(el => {
@@ -19,7 +19,7 @@ allTitles.forEach(el => {
 }) 
 
 // #3
-// make logo heading add the word funner when selected
+// make title red on click
 const logoHeading = document.querySelector('.logo-heading')
 
 logoHeading.addEventListener('click', function(item) {
@@ -28,7 +28,7 @@ logoHeading.addEventListener('click', function(item) {
 })
 
 // #4
-// Dark Mode: Turn background black & text white
+// Dark Mode: Turn background black & text white on copy
 
 const allItems = Array.from(document.getElementsByTagName('*'))
 
@@ -52,7 +52,7 @@ allImgs.forEach(el => {
 })
 
 // #6
-// make image larger if wheel'd on
+// make 3rd image larger if wheel'd on
 const lastImg = document.querySelector('.rounded')
 
 lastImg.addEventListener('wheel', function(item) {
