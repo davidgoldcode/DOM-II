@@ -76,9 +76,53 @@ penImg.addEventListener('mousemove', function(item) {
 })
 
 // #9 
-// delete banner text when selected
-const navHome = document.querySelector('a')
+// delete banner text when cut
+const navHome = document.querySelector('p')
 
-navHome.addEventListener('select', event => {
+navHome.addEventListener('cut', event => {
     navHome.style.display = 'none'
+})
+
+
+// #10
+// change body background to purple with q key
+let body = document.querySelector('body');
+
+document.addEventListener('keydown', event => {
+    // if the key pressed was ESC, dismiss the modal, otherwise nothing
+    debugger
+    if (event.key === 'q') {
+      body.style.backgroundColor = 'purple'
+    } 
+  })
+  
+//  Nest two similar events somewhere in the site and prevent the event propagation properly. Remember not all event types bubble.
+
+const destination = document.querySelectorAll('.btn')
+
+destination[0].addEventListener('click', function(event) {
+    debugger
+    destination[0].style.color = 'red'
+    event.stopPropagation();
+})
+
+destination[1].addEventListener('click', function(event) {
+    debugger
+    destination[1].style.color = 'red'
+    event.stopPropagation();
+})
+
+destination[2].addEventListener('click', function(event) {
+    debugger
+    destination[2].style.color = 'red'
+    event.stopPropagation();
+})
+
+//  Stop the navigation items from refreshing the page by using preventDefault()
+const navItems = document.querySelectorAll('nav')
+
+navItems.forEach(function(item) {
+    item.addEventListener('click', function(e) {
+        item.preventDefault();
+})
 })
